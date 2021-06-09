@@ -4,13 +4,13 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name="gasto")
 public class GastoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column
     @ManyToOne
     private CuentaEntity cuenta;
 
@@ -18,7 +18,7 @@ public class GastoEntity {
     private double importe;
 
     @Column
-    private String desc;
+    private String descripcion;
 
     @Column
     private Date fecha;
@@ -43,12 +43,12 @@ public class GastoEntity {
         this.importe = importe;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescripcion(String desc) {
+        this.descripcion = desc;
     }
 
     public Date getFecha() {

@@ -3,13 +3,13 @@ package com.example.autentia.gestor.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name="cuenta")
 public class CuentaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column
     @OneToOne
     private UserEntity user;
 

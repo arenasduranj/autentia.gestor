@@ -12,7 +12,7 @@ public class GastoDTO {
 
     private double importe;
 
-    private String desc;
+    private String descripcion;
 
     private Date fecha;
 
@@ -36,12 +36,12 @@ public class GastoDTO {
         this.importe = importe;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescripcion(String desc) {
+        this.descripcion = desc;
     }
 
     public Date getFecha() {

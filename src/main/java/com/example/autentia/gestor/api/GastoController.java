@@ -1,5 +1,6 @@
 package com.example.autentia.gestor.api;
 
+import com.example.autentia.gestor.entity.GastoEntity;
 import com.example.autentia.gestor.entity.dto.GastoDTO;
 import com.example.autentia.gestor.service.GastosService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("gasto/")
@@ -29,7 +30,7 @@ public class GastoController {
     }
 
     @GetMapping(value = "/")
-    public ArrayList<GastoDTO> getAll() {
+    public List<Object> getAll() {
         return gastosService.devolverGastos();
     }
 }
