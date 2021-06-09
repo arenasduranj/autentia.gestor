@@ -8,6 +8,10 @@ public class UserDTO {
 
     private String apellido;
 
+    private String email;
+
+    private String pass;
+
     public int getId() {
         return id;
     }
@@ -28,4 +32,19 @@ public class UserDTO {
         this.apellido = apellido;
     }
 
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
