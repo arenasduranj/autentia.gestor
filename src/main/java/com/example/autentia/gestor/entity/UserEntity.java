@@ -16,6 +16,12 @@ public class UserEntity {
     @Column
     private String apellido;
 
+    @Column
+    private String email;
+
+    @Column
+    private String pass;
+
     public int getId() {
         return id;
     }
@@ -34,5 +40,21 @@ public class UserEntity {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
