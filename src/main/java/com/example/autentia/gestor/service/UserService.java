@@ -28,8 +28,6 @@ public class UserService {
         CuentaEntity cuentaEntity = new CuentaEntity();
 
         cuentaEntity.setUs(userEntity);
-        cuentaEntity.setBalance(0);
-        cuentaEntity.setEstadoBalance(true);
 
         cuentaRepository.save(cuentaEntity);
 

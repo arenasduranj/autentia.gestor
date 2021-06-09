@@ -3,6 +3,7 @@ package com.example.autentia.gestor.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name="user")
 public class UserEntity {
 
     @Id

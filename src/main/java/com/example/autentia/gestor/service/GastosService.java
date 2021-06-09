@@ -1,12 +1,14 @@
 package com.example.autentia.gestor.service;
 
+import com.example.autentia.gestor.entity.GastoEntity;
 import com.example.autentia.gestor.entity.dto.GastoDTO;
 import com.example.autentia.gestor.repository.CuentaRepository;
 import com.example.autentia.gestor.repository.GastoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 @Service
 public class GastosService {
@@ -21,8 +23,7 @@ public class GastosService {
         return true;
     }
 
-    public ArrayList<GastoDTO> devolverGastos() {
-
-        return gastoRepository.;
+    public List<Object> devolverGastos() {
+        return gastoRepository.getAll();
     }
 }
