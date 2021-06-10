@@ -2,7 +2,6 @@ package com.example.autentia.gestor.service;
 
 import com.example.autentia.gestor.entity.CuentaEntity;
 import com.example.autentia.gestor.entity.UserEntity;
-import com.example.autentia.gestor.entity.dto.CuentaDTO;
 import com.example.autentia.gestor.entity.dto.UserAccess;
 import com.example.autentia.gestor.entity.dto.UserDTO;
 import com.example.autentia.gestor.repository.CuentaRepository;
@@ -10,8 +9,6 @@ import com.example.autentia.gestor.repository.UserRepository;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserService {
@@ -24,13 +21,14 @@ public class UserService {
 
     public boolean crearUsuario(UserDTO userDTO) {
         UserEntity userEntity = new UserEntity();
+
         BeanUtils.copyProperties(userDTO, userEntity);
 
         userRepository.save(userEntity);
 
         CuentaEntity cuentaEntity = new CuentaEntity();
 
-        cuentaEntity.setUs(userEntity);
+        cuentaEntity.setUser(userEntity);
 
         cuentaRepository.save(cuentaEntity);
 

@@ -1,7 +1,5 @@
 package com.example.autentia.gestor.entity.dto;
 
-import com.example.autentia.gestor.entity.dto.UserDTO;
-
 public class CuentaDTO {
 
     private int id;
@@ -20,7 +18,7 @@ public class CuentaDTO {
         return user;
     }
 
-    public void setUs(UserDTO us) {
+    public void setUser(UserDTO us) {
         this.user = us;
     }
 
