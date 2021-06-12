@@ -1,7 +1,5 @@
 package com.example.autentia.gestor.entity.dto;
 
-import com.example.autentia.gestor.entity.dto.CuentaDTO;
-
 import java.util.Date;
 
 public class GastoDTO {

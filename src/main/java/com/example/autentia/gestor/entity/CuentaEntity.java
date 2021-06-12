@@ -23,11 +23,11 @@ public class CuentaEntity {
         return id;
     }
 
-    public UserEntity getUs() {
+    public UserEntity getUser() {
         return user;
     }
 
-    public void setUs(UserEntity us) {
+    public void setUser(UserEntity us) {
         this.user = us;
     }
 

@@ -27,12 +27,12 @@ public class UserController {
         }
     }
 
-    @PostMapping(value = "/login")
+    @PostMapping(value = "/login/")
     public ResponseEntity login(@RequestBody UserAccess user) {
         if(userService.existeUser(user)) {
             return new ResponseEntity<>(true, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>("Error", HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(false, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
